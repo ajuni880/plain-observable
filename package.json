@@ -1,0 +1,21 @@
+{
+  "name": "plain-observable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/ajuni880/plain-observable.git"
+  },
+  "files": ["lib/**/*"],
+  "keywords": ["observable", "observer", "subject"],
+  "author": "Junaid Aslam",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
