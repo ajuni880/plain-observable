@@ -6,7 +6,8 @@
 	"types": "lib/types/index.d.ts",
 	"scripts": {
         "build": "rimraf lib && tsc",
-        "prepare": "npm run build"
+        "prepare": "npm run build",
+        "postversion": "git push && git push --tags"
 	},
 	"repository": {
 		"type": "git",
