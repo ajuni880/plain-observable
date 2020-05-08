@@ -16,6 +16,10 @@ class Subject<TState = any> {
 		}
     }
 
+    get size() {
+        return this.observers.size;
+    }
+
     private unregister(obs: IObserver): void {
         this.observers.remove(obs);
     }

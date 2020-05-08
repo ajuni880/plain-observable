@@ -1,6 +1,8 @@
 ## A simple observable
 
-```
+```javascript
+import { Subject } from 'plain-observable';
+
 const source = new Subject<number>();
 
 const unregister1 = source.register({
@@ -15,9 +17,9 @@ source.register({
     }
 });
 
-sub.notify(1)
+source.notify(1)
 
 unregister1();
 
-sub.notify(2)
+source.notify(2)
 ```

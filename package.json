@@ -1,13 +1,16 @@
 {
 	"name": "plain-observable",
-	"version": "1.0.0",
+	"version": "1.1.1",
 	"description": "A simple implementation of observable pattern",
 	"main": "lib/index.js",
 	"types": "lib/types/index.d.ts",
 	"scripts": {
+        "test": "jest --config jest.config.js",
         "build": "rimraf lib && tsc",
         "prepare": "npm run build",
-        "postversion": "git push && git push --tags"
+        "prepublishOnly": "npm run test",
+        "version" : "git add -A src",
+		"postversion": "git push && git push --tags"
 	},
 	"repository": {
 		"type": "git",
@@ -24,7 +27,11 @@
 	"author": "Junaid Aslam",
 	"license": "ISC",
 	"devDependencies": {
+		"@types/jest": "^25.2.1",
+		"@types/node": "^13.13.5",
+		"jest": "^26.0.1",
 		"rimraf": "^3.0.2",
+		"ts-jest": "^25.5.0",
 		"typescript": "^3.8.3"
 	},
 	"dependencies": {}
